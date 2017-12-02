@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		379C0A881EB89A8BA00F0C56 /* Pods_FirebaseTodoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D13A6DE20DC9698BED83AD /* Pods_FirebaseTodoList.framework */; };
 		8D3E4BF11FD26808007142C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BF01FD26808007142C9 /* AppDelegate.swift */; };
-		8D3E4BF31FD26808007142C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BF21FD26808007142C9 /* ViewController.swift */; };
+		8D3E4BF31FD26808007142C9 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4BF21FD26808007142C9 /* LogInVC.swift */; };
 		8D3E4BF61FD26808007142C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E4BF41FD26808007142C9 /* Main.storyboard */; };
 		8D3E4BF81FD26808007142C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E4BF71FD26808007142C9 /* Assets.xcassets */; };
 		8D3E4BFB1FD26808007142C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E4BF91FD26808007142C9 /* LaunchScreen.storyboard */; };
 		8D3E4C031FD2F7AD007142C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E4C021FD2F7AD007142C9 /* GoogleService-Info.plist */; };
+		8D3E4C091FD328B1007142C9 /* SingUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4C081FD328B1007142C9 /* SingUpVC.swift */; };
+		8D3E4C0B1FD328C1007142C9 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4C0A1FD328C1007142C9 /* ResetPasswordVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +24,14 @@
 		77D13A6DE20DC9698BED83AD /* Pods_FirebaseTodoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseTodoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3E4BED1FD26808007142C9 /* FirebaseTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3E4BF01FD26808007142C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D3E4BF21FD26808007142C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D3E4BF21FD26808007142C9 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		8D3E4BF51FD26808007142C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D3E4BF71FD26808007142C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D3E4BFA1FD26808007142C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D3E4BFC1FD26808007142C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D3E4C021FD2F7AD007142C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8D3E4C081FD328B1007142C9 /* SingUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpVC.swift; sourceTree = "<group>"; };
+		8D3E4C0A1FD328C1007142C9 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +97,9 @@
 		8D3E4C051FD2FE0A007142C9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8D3E4BF21FD26808007142C9 /* ViewController.swift */,
+				8D3E4BF21FD26808007142C9 /* LogInVC.swift */,
+				8D3E4C081FD328B1007142C9 /* SingUpVC.swift */,
+				8D3E4C0A1FD328C1007142C9 /* ResetPasswordVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D3E4BF31FD26808007142C9 /* ViewController.swift in Sources */,
+				8D3E4BF31FD26808007142C9 /* LogInVC.swift in Sources */,
+				8D3E4C091FD328B1007142C9 /* SingUpVC.swift in Sources */,
 				8D3E4BF11FD26808007142C9 /* AppDelegate.swift in Sources */,
+				8D3E4C0B1FD328C1007142C9 /* ResetPasswordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
