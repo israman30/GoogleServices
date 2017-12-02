@@ -23,9 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ori-2m-gi0">
-                                <rect key="frame" x="16" y="72" width="343" height="328"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ori-2m-gi0">
+                                <rect key="frame" x="16" y="129" width="343" height="328"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-Ah-Ij8">
                                         <rect key="frame" x="27" y="57" width="289" height="40"/>
@@ -49,7 +48,7 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Drr-LZ-DG8" kind="custom" id="ZFJ-LT-vdJ"/>
+                                            <segue destination="Drr-LZ-DG8" kind="modal" modalTransitionStyle="crossDissolve" id="L8q-sZ-0Si"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25P-ja-Z5r">
@@ -62,9 +61,17 @@
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.31855761999999999" green="0.3573676348" blue="0.39487045999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="dBY-wH-gdi"/>
+                                    <constraint firstAttribute="height" constant="328" id="sT7-iw-K6J"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ori-2m-gi0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AnV-bv-lEE"/>
+                            <constraint firstItem="ori-2m-gi0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40.5" id="jXm-b5-udj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
