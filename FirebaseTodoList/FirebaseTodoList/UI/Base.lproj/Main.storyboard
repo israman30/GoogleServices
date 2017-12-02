@@ -66,6 +66,9 @@
                                         <state key="normal" title="Forgot Password">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="l6a-Bc-GK4" kind="push" id="K43-0e-41n"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.31855761999999999" green="0.3573676348" blue="0.39487045999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -329,6 +332,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="13J-E7-d6Q"/>
                     </view>
+                    <navigationItem key="navigationItem" id="31d-3h-NRd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYZ-Pd-BFc" sceneMemberID="firstResponder"/>
             </objects>
