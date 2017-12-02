@@ -76,9 +76,7 @@
 				8D3E4C061FD2FE13007142C9 /* Model */,
 				8D3E4C051FD2FE0A007142C9 /* Controllers */,
 				8D3E4C041FD2FE02007142C9 /* View */,
-				8D3E4BF41FD26808007142C9 /* Main.storyboard */,
-				8D3E4BF71FD26808007142C9 /* Assets.xcassets */,
-				8D3E4BF91FD26808007142C9 /* LaunchScreen.storyboard */,
+				8D3E4C071FD300DA007142C9 /* UI */,
 				8D3E4C021FD2F7AD007142C9 /* GoogleService-Info.plist */,
 				8D3E4BFC1FD26808007142C9 /* Info.plist */,
 			);
@@ -105,6 +103,16 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8D3E4C071FD300DA007142C9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8D3E4BF41FD26808007142C9 /* Main.storyboard */,
+				8D3E4BF71FD26808007142C9 /* Assets.xcassets */,
+				8D3E4BF91FD26808007142C9 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		C72CB335B534F26B1487F28A /* Frameworks */ = {
