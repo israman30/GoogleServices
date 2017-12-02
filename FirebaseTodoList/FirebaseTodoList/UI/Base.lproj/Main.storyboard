@@ -43,6 +43,9 @@
                                         <state key="normal" title="New User">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Drr-LZ-DG8" kind="custom" id="ZFJ-LT-vdJ"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25P-ja-Z5r">
                                         <rect key="frame" x="27" y="105" width="289" height="40"/>
