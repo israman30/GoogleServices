@@ -67,7 +67,7 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="l6a-Bc-GK4" kind="push" id="K43-0e-41n"/>
+                                            <segue destination="l6a-Bc-GK4" kind="modal" modalTransitionStyle="crossDissolve" id="zEi-yF-dRN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -77,6 +77,13 @@
                                     <constraint firstAttribute="height" constant="328" id="sT7-iw-K6J"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFU-7H-CPO">
+                                <rect key="frame" x="108" y="57" width="154" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -88,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="127"/>
+            <point key="canvasLocation" x="88.799999999999997" y="126.38680659670166"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Xht-MB-QqJ">
@@ -252,6 +259,9 @@
                                                     <state key="normal" title="Back">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="yC7-Fg-4dk" kind="unwind" unwindAction="unwindToLogin:" id="09f-U4-3x0"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -272,6 +282,7 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1K-9i-wNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yC7-Fg-4dk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="127.28635682158921"/>
         </scene>
@@ -308,6 +319,9 @@
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="hVT-Z7-oYk" kind="unwind" unwindAction="unwindToLogin:" id="FIF-yx-llt"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XT3-zu-pCM">
                                         <rect key="frame" x="27" y="105" width="289" height="40"/>
@@ -324,6 +338,13 @@
                                     <constraint firstAttribute="width" constant="343" id="UbL-0H-cEs"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reset" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfG-5a-c48">
+                                <rect key="frame" x="121" y="35" width="154" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -335,8 +356,9 @@
                     <navigationItem key="navigationItem" id="31d-3h-NRd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYZ-Pd-BFc" sceneMemberID="firstResponder"/>
+                <exit id="hVT-Z7-oYk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1476" y="127"/>
+            <point key="canvasLocation" x="89" y="819"/>
         </scene>
     </scenes>
 </document>
