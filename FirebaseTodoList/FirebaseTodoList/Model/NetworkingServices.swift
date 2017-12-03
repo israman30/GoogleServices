@@ -35,7 +35,7 @@ struct NetworkingServices {
     }
     
     
-    // MARK: - Sign in the user with info - this function is called on saveInfo()
+    // MARK: - # 4 -> Sign in the user with info - this function is called on saveInfo()
     func signIn(email: String, password: String){
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error == nil {
