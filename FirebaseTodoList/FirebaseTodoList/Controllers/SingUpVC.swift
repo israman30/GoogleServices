@@ -30,6 +30,8 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
         
         countries()
         
+        userPhoto.layer.cornerRadius = 235/2
+        
     }
     
     // sub.MARK: - Countries from LOCALE array

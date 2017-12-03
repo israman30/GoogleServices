@@ -116,7 +116,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="S18-me-4Q0">
-                                                    <rect key="frame" x="61" y="-1" width="253" height="235"/>
+                                                    <rect key="frame" x="61" y="-1" width="235" height="235"/>
                                                     <gestureRecognizers/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC7-MU-H0r">
@@ -130,7 +130,7 @@
                                                 <constraint firstItem="S18-me-4Q0" firstAttribute="top" secondItem="WvB-ux-Vjo" secondAttribute="top" constant="-1" id="6cm-gm-wkR"/>
                                                 <constraint firstAttribute="bottom" secondItem="fC7-MU-H0r" secondAttribute="bottom" id="Bpg-xb-hJO"/>
                                                 <constraint firstItem="S18-me-4Q0" firstAttribute="leading" secondItem="WvB-ux-Vjo" secondAttribute="leading" constant="61" id="Hn1-ls-IfV"/>
-                                                <constraint firstAttribute="trailing" secondItem="S18-me-4Q0" secondAttribute="trailing" constant="61" id="J5H-2g-Upk"/>
+                                                <constraint firstAttribute="trailing" secondItem="S18-me-4Q0" secondAttribute="trailing" constant="79" id="J5H-2g-Upk"/>
                                                 <constraint firstItem="fC7-MU-H0r" firstAttribute="leading" secondItem="WvB-ux-Vjo" secondAttribute="leading" constant="61" id="PCI-vh-t7j"/>
                                                 <constraint firstAttribute="bottom" secondItem="S18-me-4Q0" secondAttribute="bottom" id="U6d-CQ-mQ8"/>
                                                 <constraint firstItem="fC7-MU-H0r" firstAttribute="top" secondItem="WvB-ux-Vjo" secondAttribute="top" id="oI9-Wg-fbv"/>
