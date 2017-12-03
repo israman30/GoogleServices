@@ -24,7 +24,7 @@ class LogInVC: UIViewController {
         networkingService.signIn(email: emailTxt.text!, password: passwordTxt.text!)
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LogIn")
-        present(vc, animated: true, completion: nil)
+        present(vc, animated: true, completion: nil) 
     }
     
     @IBAction func unwindToLogin(storyboard: UIStoryboardSegue){}

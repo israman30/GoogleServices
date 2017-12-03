@@ -590,15 +590,15 @@
             </objects>
             <point key="canvasLocation" x="2302" y="127"/>
         </scene>
-        <!--View Controller-->
+        <!--ProfileVC-->
         <scene sceneID="Uxt-Ri-mg4">
             <objects>
-                <viewController id="fFR-GC-rXR" sceneMemberID="viewController">
+                <viewController id="fFR-GC-rXR" customClass="ProfileVC" customModule="FirebaseTodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b5l-wm-or2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image=" " translatesAutoresizingMaskIntoConstraints="NO" id="L8I-vU-toT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="L8I-vU-toT">
                                 <rect key="frame" x="62" y="92" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -627,7 +627,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jrn-tO-bAf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Flq-V6-edg"/>
+                    <navigationItem key="navigationItem" id="Flq-V6-edg">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="RIL-S6-72e">
+                            <connections>
+                                <action selector="logOutAction:" destination="fFR-GC-rXR" id="O5H-ZV-txZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjF-FG-teW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -654,7 +660,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name=" " width="16" height="16"/>
         <image name="placeholder" width="300" height="300"/>
     </resources>
 </document>
