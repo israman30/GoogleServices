@@ -26,6 +26,21 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
     @IBAction func signUpAction(_ sender: Any) {
     }
     @IBAction func photoChosingAction(_ sender: Any) {
+        alerts()
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            userPhoto.image = image
+        } else {
+            print("Image was not selected")
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension SingUpVC {
+    private func alerts(){
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.allowsEditing = true
@@ -54,14 +69,5 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
         alert.addAction(cancel)
         
         present(alert, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            userPhoto.image = image
-        } else {
-            print("Image was not selected")
-        }
-        self.dismiss(animated: true, completion: nil)
     }
 }
