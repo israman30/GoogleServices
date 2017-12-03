@@ -14,8 +14,13 @@ import FirebaseDatabase
 
 struct NetworkingServices {
     
-    let databaseRef = Database.database().reference()
-    let storageRef = Storage.storage().reference()
+    var databaseRef: DatabaseReference! {
+        return Database.database().reference()
+    }
+    
+    var storageRef: StorageReference! {
+        return Storage.storage().reference()
+    }
     
     
     // MARK: - # 3 -> Saving a function where the user info is storaged

@@ -88,7 +88,6 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
         networkingService.signUp(email: emailTxt.text!, username: usernameTxt.text!, password: passwordTxt.text!, country: countryTxt.text!, data: data!)
     }
     
-   
     @IBAction func actionPhoto(_ sender: Any) {
         pickPhoto()
     }
@@ -135,5 +134,4 @@ extension SingUpVC {
         
         present(alert, animated: true, completion: nil)
     }
-    
 }
