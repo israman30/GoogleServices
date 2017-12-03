@@ -297,7 +297,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1K-9i-wNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="yC7-Fg-4dk" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="4k3-97-NaP"/>
+                <tapGestureRecognizer id="4k3-97-NaP">
+                    <connections>
+                        <action selector="photoChosingAction:" destination="Drr-LZ-DG8" id="cE7-aI-ds8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="127.28635682158921"/>
         </scene>
