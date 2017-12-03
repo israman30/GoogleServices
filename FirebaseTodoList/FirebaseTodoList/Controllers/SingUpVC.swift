@@ -46,16 +46,19 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
             self.present(pickerController, animated: true, completion: nil)
         }
         
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        
         alert.addAction(camera)
         alert.addAction(photoAlbum)
         alert.addAction(savePhoto)
+        alert.addAction(cancel)
         
         present(alert, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            userImageView.image = image
+            userPhoto.image = image
         } else {
             print("Image was not selected")
         }
