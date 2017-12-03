@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -118,16 +119,23 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="S18-me-4Q0">
                                                     <rect key="frame" x="61" y="-1" width="253" height="235"/>
                                                     <gestureRecognizers/>
-                                                    <connections>
-                                                        <outletCollection property="gestureRecognizers" destination="4k3-97-NaP" appends="YES" id="g23-Al-YA0"/>
-                                                    </connections>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC7-MU-H0r">
+                                                    <rect key="frame" x="16" y="11" width="343" height="213"/>
+                                                    <connections>
+                                                        <action selector="actionPhoto:" destination="Drr-LZ-DG8" eventType="touchUpInside" id="l9D-cp-KDC"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="S18-me-4Q0" firstAttribute="top" secondItem="WvB-ux-Vjo" secondAttribute="top" constant="-1" id="6cm-gm-wkR"/>
                                                 <constraint firstItem="S18-me-4Q0" firstAttribute="leading" secondItem="WvB-ux-Vjo" secondAttribute="leading" constant="61" id="Hn1-ls-IfV"/>
                                                 <constraint firstAttribute="trailing" secondItem="S18-me-4Q0" secondAttribute="trailing" constant="61" id="J5H-2g-Upk"/>
                                                 <constraint firstAttribute="bottom" secondItem="S18-me-4Q0" secondAttribute="bottom" id="U6d-CQ-mQ8"/>
+                                                <constraint firstItem="fC7-MU-H0r" firstAttribute="leading" secondItem="WvB-ux-Vjo" secondAttribute="leadingMargin" id="qi7-Yu-Ehd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fC7-MU-H0r" secondAttribute="bottom" id="uNa-2N-UAk"/>
+                                                <constraint firstItem="fC7-MU-H0r" firstAttribute="top" secondItem="WvB-ux-Vjo" secondAttribute="topMargin" id="udl-vr-9C8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fC7-MU-H0r" secondAttribute="trailing" id="xfp-9S-ih0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -297,11 +305,6 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1K-9i-wNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="yC7-Fg-4dk" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="4k3-97-NaP">
-                    <connections>
-                        <action selector="photoChosingAction:" destination="Drr-LZ-DG8" id="cE7-aI-ds8"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="127.28635682158921"/>
         </scene>

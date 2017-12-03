@@ -86,10 +86,12 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
         networkingService.signUp(email: emailTxt.text!, username: usernameTxt.text!, password: passwordTxt.text!, country: countryTxt.text!, data: data!)
     }
     
-    @IBAction func photoChosingAction(_ sender: Any) {
-        print("Button was tapped")
+   
+    @IBAction func actionPhoto(_ sender: Any) {
+        print("Btn works!")
         alerts()
     }
+    
     
     func alerts(){
         let pickerController = UIImagePickerController()
