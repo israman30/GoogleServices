@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -121,7 +120,7 @@
                                                     <gestureRecognizers/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC7-MU-H0r">
-                                                    <rect key="frame" x="16" y="11" width="343" height="213"/>
+                                                    <rect key="frame" x="61" y="0.0" width="253" height="234"/>
                                                     <connections>
                                                         <action selector="actionPhoto:" destination="Drr-LZ-DG8" eventType="touchUpInside" id="l9D-cp-KDC"/>
                                                     </connections>
@@ -129,13 +128,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="S18-me-4Q0" firstAttribute="top" secondItem="WvB-ux-Vjo" secondAttribute="top" constant="-1" id="6cm-gm-wkR"/>
+                                                <constraint firstAttribute="bottom" secondItem="fC7-MU-H0r" secondAttribute="bottom" id="Bpg-xb-hJO"/>
                                                 <constraint firstItem="S18-me-4Q0" firstAttribute="leading" secondItem="WvB-ux-Vjo" secondAttribute="leading" constant="61" id="Hn1-ls-IfV"/>
                                                 <constraint firstAttribute="trailing" secondItem="S18-me-4Q0" secondAttribute="trailing" constant="61" id="J5H-2g-Upk"/>
+                                                <constraint firstItem="fC7-MU-H0r" firstAttribute="leading" secondItem="WvB-ux-Vjo" secondAttribute="leading" constant="61" id="PCI-vh-t7j"/>
                                                 <constraint firstAttribute="bottom" secondItem="S18-me-4Q0" secondAttribute="bottom" id="U6d-CQ-mQ8"/>
-                                                <constraint firstItem="fC7-MU-H0r" firstAttribute="leading" secondItem="WvB-ux-Vjo" secondAttribute="leadingMargin" id="qi7-Yu-Ehd"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="fC7-MU-H0r" secondAttribute="bottom" id="uNa-2N-UAk"/>
-                                                <constraint firstItem="fC7-MU-H0r" firstAttribute="top" secondItem="WvB-ux-Vjo" secondAttribute="topMargin" id="udl-vr-9C8"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="fC7-MU-H0r" secondAttribute="trailing" id="xfp-9S-ih0"/>
+                                                <constraint firstItem="fC7-MU-H0r" firstAttribute="top" secondItem="WvB-ux-Vjo" secondAttribute="top" id="oI9-Wg-fbv"/>
+                                                <constraint firstAttribute="trailing" secondItem="fC7-MU-H0r" secondAttribute="trailing" constant="61" id="tmg-ws-ysh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
