@@ -29,9 +29,21 @@ struct NetworkingServices {
         
         // Sub.MARK: - Saving user on database
         userRef.setValue(userInfo)
+        
+        signIn(email: user.email!, password: password)
     }
     
     func signIn(email: String, password: String){
-        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error == nil {
+                if let user = user {
+                    print(user.displayName!, "User sign in!!")
+                }
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
     }
+    
+    private func
 }
