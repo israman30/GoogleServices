@@ -48,6 +48,13 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
         pickerView.delegate = self
         pickerView.dataSource = self
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissController(gesture:)))
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func dismissController(gesture: UIGestureRecognizer){
+        view.endEditing(true)
     }
     
     
@@ -64,7 +71,7 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let title = NSAttributedString(string: countriesArray[row], attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        let title = NSAttributedString(string: countriesArray[row], attributes: [NSAttributedStringKey.foregroundColor: UIColor.black])
         return title
     }
     
