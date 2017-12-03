@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ProfileVC: UIViewController {
     
@@ -14,5 +16,14 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func logOutAction(_ sender: Any) {
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LogIn")
+                present(vc, animated: true, completion: nil)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
