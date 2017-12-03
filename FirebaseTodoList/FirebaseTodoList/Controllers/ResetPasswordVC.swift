@@ -7,10 +7,23 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ResetPassword: UIViewController {
     
+    @IBOutlet weak var emailTxt: UITextField!
+    
+    let networkService = NetworkingServices()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func resetAction(_ sender: Any) {
+        
+        guard let email = emailTxt.text else {return}
+        
+        networkService.resetPassword(email: email)
     }
 }

@@ -522,6 +522,9 @@
                                         <state key="normal" title="Reset Password">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resetAction:" destination="l6a-Bc-GK4" eventType="touchUpInside" id="nZO-Xh-D0F"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6q-cA-u9v">
                                         <rect key="frame" x="27" y="236" width="289" height="40"/>
@@ -565,6 +568,9 @@
                         <viewLayoutGuide key="safeArea" id="13J-E7-d6Q"/>
                     </view>
                     <navigationItem key="navigationItem" id="31d-3h-NRd"/>
+                    <connections>
+                        <outlet property="emailTxt" destination="iBu-tp-Gxb" id="Yl9-15-RWJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYZ-Pd-BFc" sceneMemberID="firstResponder"/>
                 <exit id="hVT-Z7-oYk" userLabel="Exit" sceneMemberID="exit"/>

@@ -96,6 +96,16 @@ struct NetworkingServices {
             }
         }
     }
+    
+    func resetPassword(email:String){
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if error == nil {
+                
+            } else {
+                print(error!.localizedDescription)
+            }
+        }
+    }
 }
 
 
