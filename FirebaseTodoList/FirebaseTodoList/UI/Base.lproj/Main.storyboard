@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Log InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirebaseTodoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInVC" customModule="FirebaseTodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="l6a-Bc-GK4" kind="modal" modalTransitionStyle="crossDissolve" id="zEi-yF-dRN"/>
+                                            <segue destination="l6a-Bc-GK4" kind="modal" modalTransitionStyle="crossDissolve" id="Pt7-aI-dSy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="126.38680659670166"/>
         </scene>
-        <!--Table View Controller-->
+        <!--ListVC-->
         <scene sceneID="Xht-MB-QqJ">
             <objects>
-                <tableViewController id="Drr-LZ-DG8" sceneMemberID="viewController">
+                <tableViewController id="Drr-LZ-DG8" customClass="ListVC" customModule="FirebaseTodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="B5M-q6-ogx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,7 +260,7 @@
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="yC7-Fg-4dk" kind="unwind" unwindAction="unwindToLogin:" id="09f-U4-3x0"/>
+                                                        <segue destination="yC7-Fg-4dk" kind="unwind" unwindAction="unwindToLoginWithStoryboard:" id="kct-UJ-DZz"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -286,10 +286,10 @@
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="127.28635682158921"/>
         </scene>
-        <!--View Controller-->
+        <!--Reset Password-->
         <scene sceneID="e64-0a-dlf">
             <objects>
-                <viewController id="l6a-Bc-GK4" customClass="ViewController" customModule="FirebaseTodoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l6a-Bc-GK4" customClass="ResetPassword" customModule="FirebaseTodoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jkI-Qy-jgB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,7 +320,7 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="hVT-Z7-oYk" kind="unwind" unwindAction="unwindToLogin:" id="FIF-yx-llt"/>
+                                            <segue destination="hVT-Z7-oYk" kind="unwind" unwindAction="unwindToLoginWithStoryboard:" id="v4H-UL-7ba"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XT3-zu-pCM">

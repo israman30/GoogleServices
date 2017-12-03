@@ -15,6 +15,6 @@ class LogInVC: UIViewController {
         
     }
 
-    @IBAction func unwindToLogin(_ s: UIStoryboardSegue){}
+    @IBAction func unwindToLogin(storyboard: UIStoryboardSegue){}
 }
 
