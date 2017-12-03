@@ -23,4 +23,6 @@ class SingUpVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBAction func signUpAction(_ sender: Any) {
+    }
 }
