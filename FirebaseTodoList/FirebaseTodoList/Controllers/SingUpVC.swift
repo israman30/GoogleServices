@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var userPhoto: UIImageView!
     
@@ -20,9 +20,56 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
     
     @IBOutlet weak var countryTxt: UITextField!
     
+    var countriesArray = [String]()
+    var pickerView: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
+    
+    func countries(){
+        for code in Locale.isoRegionCodes {
+            let country = Locale.current.localizedString(forRegionCode: code)!
+            print(code)
+            let name = Locale(identifier: "en_EN").localizedString(forCollationIdentifier: country) ?? "\(country)"
+            print("Found countries \(country)")
+            countriesArray.append(name)
+            countriesArray.sort(by: { (name1, name2) -> Bool in
+                name1 < name2
+            })
+        }
+        pickerView = UIPickerView()
+        
+        countryTxt.inputView = pickerView
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+    }
+    
+    
+    // MARK: - Picker view data source function
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return countriesArray[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        countryTxt.text = countriesArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return countriesArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let title = NSAttributedString(string: countriesArray[row], attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        return title
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
     @IBAction func signUpAction(_ sender: Any) {
     }
     @IBAction func photoChosingAction(_ sender: Any) {
@@ -40,6 +87,7 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
 }
 
 extension SingUpVC {
+
     private func alerts(){
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
