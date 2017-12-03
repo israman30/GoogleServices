@@ -18,6 +18,7 @@
 		8D3E4C0B1FD328C1007142C9 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4C0A1FD328C1007142C9 /* ResetPasswordVC.swift */; };
 		8D3E4C0D1FD32938007142C9 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4C0C1FD32938007142C9 /* ListVC.swift */; };
 		8D3E4C0F1FD32970007142C9 /* AddList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4C0E1FD32970007142C9 /* AddList.swift */; };
+		8D3E4C111FD39CF7007142C9 /* NetworkingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4C101FD39CF7007142C9 /* NetworkingServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8D3E4C0A1FD328C1007142C9 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		8D3E4C0C1FD32938007142C9 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		8D3E4C0E1FD32970007142C9 /* AddList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddList.swift; sourceTree = "<group>"; };
+		8D3E4C101FD39CF7007142C9 /* NetworkingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		8D3E4C061FD2FE13007142C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8D3E4C101FD39CF7007142C9 /* NetworkingServices.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				8D3E4BF31FD26808007142C9 /* LogInVC.swift in Sources */,
 				8D3E4C0D1FD32938007142C9 /* ListVC.swift in Sources */,
 				8D3E4C091FD328B1007142C9 /* SingUpVC.swift in Sources */,
+				8D3E4C111FD39CF7007142C9 /* NetworkingServices.swift in Sources */,
 				8D3E4C0F1FD32970007142C9 /* AddList.swift in Sources */,
 				8D3E4BF11FD26808007142C9 /* AppDelegate.swift in Sources */,
 				8D3E4C0B1FD328C1007142C9 /* ResetPasswordVC.swift in Sources */,
