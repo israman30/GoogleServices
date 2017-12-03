@@ -23,6 +23,8 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
     var countriesArray = [String]()
     var pickerView: UIPickerView!
     
+    let networkingService = NetworkingServices()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,6 +82,9 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
     }
     
     @IBAction func signUpAction(_ sender: Any) {
+        
+        let data = UIImageJPEGRepresentation(userPhoto.image!, 0.8)
+        networkingService.signUp(email: emailTxt.text!, username: usernameTxt.text!, password: passwordTxt.text!, country: countryTxt.text!, data: data!)
     }
     
     @IBAction func photoChosingAction(_ sender: Any) {

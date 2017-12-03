@@ -18,7 +18,7 @@ struct NetworkingServices {
     let storageRef = Storage.storage().reference()
     
     
-    // MARK: - Creating a function where the user info is storaged
+    // MARK: - # 3 -> Saving a function where the user info is storaged
     private func saveInfo(user: User!, username: String, password: String, country: String){
         
         // sub.MARK: - Array of Dictionary hold the user
@@ -48,6 +48,8 @@ struct NetworkingServices {
         }
     }
     
+    
+    // MARK: # 2 -> User is been set
     private func setUser(user: User!, username: String, password: String, country: String, data: Data!){
         // Sub.MARK: - Set path for user image
         let imagePath = "userImage\(user.uid)/userpic.jpg"
@@ -72,6 +74,18 @@ struct NetworkingServices {
                         print(error!.localizedDescription)
                     }
                 })
+            } else {
+                print(error!.localizedDescription)
+            }
+        }
+    }
+    
+    
+    // MARK: - # 1 -> create a user
+    func signUp(email: String ,username: String, password: String, country: String, data: Data!){
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if error == nil {
+                self.setUser(user: user, username: username, password: password, country: country, data: data)
             } else {
                 print(error!.localizedDescription)
             }
