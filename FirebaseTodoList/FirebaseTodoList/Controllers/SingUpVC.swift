@@ -8,7 +8,17 @@
 
 import UIKit
 
-class SingUpVC: UIViewController {
+class SingUpVC: UITableViewController {
+    
+    @IBOutlet weak var userPhoto: UIImageView!
+    
+    @IBOutlet weak var usernameTxt: UITextField!
+    
+    @IBOutlet weak var emailTxt: UITextField!
+    
+    @IBOutlet weak var passwordTxt: UITextField!
+    
+    @IBOutlet weak var countryTxt: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
