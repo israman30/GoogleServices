@@ -38,7 +38,6 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
             let country = Locale.current.localizedString(forRegionCode: code)!
             print(code)
             let name = Locale(identifier: "en_EN").localizedString(forCollationIdentifier: country) ?? "\(country)"
-            print("Found countries \(country)")
             countriesArray.append(name)
             countriesArray.sort(by: { (name1, name2) -> Bool in
                 name1 < name2
@@ -88,27 +87,17 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
     }
     
     @IBAction func photoChosingAction(_ sender: Any) {
+        print("Button was tapped")
         alerts()
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            userPhoto.image = image
-        } else {
-            print("Image was not selected")
-        }
-        self.dismiss(animated: true, completion: nil)
-    }
-}
-
-extension SingUpVC {
-
-    private func alerts(){
+    func alerts(){
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.allowsEditing = true
         
         let alert = UIAlertController(title: "Add Photo", message: "Choose a photo", preferredStyle: .actionSheet)
+        
         let camera = UIAlertAction(title: "Camera", style: .default) { (action) in
             pickerController.sourceType = .camera
             self.present(pickerController, animated: true, completion: nil)
@@ -133,4 +122,18 @@ extension SingUpVC {
         
         present(alert, animated: true, completion: nil)
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            userPhoto.image = image
+        } else {
+            print("Image was not selected")
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension SingUpVC {
+
+    
 }
