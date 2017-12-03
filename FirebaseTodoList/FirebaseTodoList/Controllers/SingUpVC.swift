@@ -26,10 +26,12 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        countries()
         
     }
     
-    func countries(){
+    // sub.MARK: - Countries from LOCALE array
+    private func countries(){
         for code in Locale.isoRegionCodes {
             let country = Locale.current.localizedString(forRegionCode: code)!
             print(code)
@@ -72,6 +74,7 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
     
     @IBAction func signUpAction(_ sender: Any) {
     }
+    
     @IBAction func photoChosingAction(_ sender: Any) {
         alerts()
     }
