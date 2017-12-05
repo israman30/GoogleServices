@@ -27,7 +27,7 @@ struct NetworkingServices {
     private func saveInfo(user: User!, username: String, password: String, country: String){
         
         // sub.MARK: - Array of Dictionary hold the user
-        let userInfo = ["email":user.email!, "username":username, "country":country, "photoUrl": String(describing: user.photoURL!), "user":user.uid]
+        let userInfo = ["email":user.email, "username":username, "country":country, "photoUrl": String(describing: user.photoURL!), "user":user.uid]
         
         // Sub.MARK: - Create a user reference
         let userRef = databaseRef.child("users").child(user.uid)
@@ -90,7 +90,7 @@ struct NetworkingServices {
     func signUp(email: String ,username: String, password: String, country: String, data: Data!){
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error == nil {
-                self.setUser(user: user, username: username, password: password, country: country, data: data)
+                self.setUser(user: user, username: username, password: password, country: country, data: data!)
             } else {
                 print(error!.localizedDescription)
             }
@@ -100,7 +100,7 @@ struct NetworkingServices {
     func resetPassword(email:String){
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             if error == nil {
-                
+                print("An email to explain how to reset password has been sent to you. Thank you!")
             } else {
                 print(error!.localizedDescription)
             }

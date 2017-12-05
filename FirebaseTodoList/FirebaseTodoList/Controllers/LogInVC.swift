@@ -20,6 +20,8 @@ class LogInVC: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    // MARK: - LOG IN FUNCTION
     @IBAction func logInAction(_ sender: Any) {
         
         guard let email = emailTxt.text, let password = passwordTxt.text else {return}

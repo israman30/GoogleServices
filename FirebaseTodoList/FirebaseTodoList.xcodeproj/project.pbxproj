@@ -20,6 +20,7 @@
 		8D3E4C0F1FD32970007142C9 /* AddList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4C0E1FD32970007142C9 /* AddList.swift */; };
 		8D3E4C111FD39CF7007142C9 /* NetworkingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4C101FD39CF7007142C9 /* NetworkingServices.swift */; };
 		8D3E4C131FD4758C007142C9 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4C121FD4758C007142C9 /* ProfileVC.swift */; };
+		8D3E4C151FD6CDFF007142C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4C141FD6CDFF007142C9 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		8D3E4C0E1FD32970007142C9 /* AddList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddList.swift; sourceTree = "<group>"; };
 		8D3E4C101FD39CF7007142C9 /* NetworkingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServices.swift; sourceTree = "<group>"; };
 		8D3E4C121FD4758C007142C9 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		8D3E4C141FD6CDFF007142C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				8D3E4C101FD39CF7007142C9 /* NetworkingServices.swift */,
+				8D3E4C141FD6CDFF007142C9 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				8D3E4C091FD328B1007142C9 /* SingUpVC.swift in Sources */,
 				8D3E4C111FD39CF7007142C9 /* NetworkingServices.swift in Sources */,
 				8D3E4C131FD4758C007142C9 /* ProfileVC.swift in Sources */,
+				8D3E4C151FD6CDFF007142C9 /* User.swift in Sources */,
 				8D3E4C0F1FD32970007142C9 /* AddList.swift in Sources */,
 				8D3E4BF11FD26808007142C9 /* AppDelegate.swift in Sources */,
 				8D3E4C0B1FD328C1007142C9 /* ResetPasswordVC.swift in Sources */,

@@ -9,12 +9,16 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - LOG OUT FUNCION
     @IBAction func logOutAction(_ sender: Any) {
         if Auth.auth().currentUser != nil {
             do {

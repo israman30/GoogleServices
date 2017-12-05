@@ -85,7 +85,15 @@ class SingUpVC: UITableViewController, UIImagePickerControllerDelegate, UINaviga
     @IBAction func signUpAction(_ sender: Any) {
         
         let data = UIImageJPEGRepresentation(userPhoto.image!, 0.8)
-        networkingService.signUp(email: emailTxt.text!, username: usernameTxt.text!, password: passwordTxt.text!, country: countryTxt.text!, data: data!)
+        
+        guard let email = emailTxt.text,
+            let username = usernameTxt.text,
+            let password = passwordTxt.text,
+            let country = countryTxt.text else {return}
+        
+        guard let ImageData = data else {return}
+        
+        networkingService.signUp(email:email, username: username, password: password, country: country, data: ImageData)
     }
     
     @IBAction func actionPhoto(_ sender: Any) {

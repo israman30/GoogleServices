@@ -20,6 +20,7 @@ class ResetPassword: UIViewController {
         super.viewDidLoad()
     }
     
+    // MARK: - RESET PASSWORD FUNCTION
     @IBAction func resetAction(_ sender: Any) {
         
         guard let email = emailTxt.text else {return}
