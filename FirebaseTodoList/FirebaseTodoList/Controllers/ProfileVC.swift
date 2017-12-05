@@ -14,12 +14,20 @@ import FirebaseStorage
 
 class ProfileVC: UIViewController {
     
+    @IBOutlet weak var photoProfile: UIImageView!
+    
+    @IBOutlet weak var username: UITextField!
+    
+    @IBOutlet weak var email: UITextField!
+    
+    @IBOutlet weak var country: UITextField!
+    
     var databaseRef: DatabaseReference! {
         return Database.database().reference()
     }
     
-    var storageRef: StorageReference! {
-        return Storage.storage().reference()
+    var storageRef: Storage! {
+        return Storage.storage()
     }
     
     override func viewDidLoad() {
@@ -37,13 +45,27 @@ class ProfileVC: UIViewController {
             databaseRef.child("users").observe(.value, with: { (snapshot) in
                 DispatchQueue.main.async {
                     let user = UserRetrive(snapshot: snapshot)
+                    self.username.text = user.username
+                    self.email.text = user.email
+                    self.country.text = user.country
+                    let imageUrl = String(user.photoUrl)
                     
+                    // Sub.MARK: Retriving image url from storage
+                    self.storageRef.reference(forURL: imageUrl).getData(maxSize: 1 * 1024 * 1024, completion: { (data, error) in
+                        
+                        if let error = error {
+                            print(error.localizedDescription)
+                        } else {
+                            if let data = data {
+                                self.photoProfile.image = UIImage(data: data)
+                            }
+                        }
+                    })
                 }
             }) { (error) in
                 print(error.localizedDescription)
             }
         }
-        
     }
     
     // MARK: - LOG OUT FUNCION

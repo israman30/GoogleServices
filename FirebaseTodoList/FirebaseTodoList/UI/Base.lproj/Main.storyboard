@@ -640,6 +640,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="country" destination="NIQ-yM-Y4d" id="lZh-ry-qJd"/>
+                        <outlet property="email" destination="FLo-jm-hce" id="4D4-Te-M3u"/>
+                        <outlet property="photoProfile" destination="L8I-vU-toT" id="atW-SN-hzZ"/>
+                        <outlet property="username" destination="OsK-I6-yfq" id="KDE-Y1-Ees"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TjF-FG-teW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
