@@ -14,8 +14,36 @@ import FirebaseStorage
 
 class ProfileVC: UIViewController {
     
+    var databaseRef: DatabaseReference! {
+        return Database.database().reference()
+    }
+    
+    var storageRef: StorageReference! {
+        return Storage.storage().reference()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if Auth.auth().currentUser == nil {
+            
+            // Sub.MARK: - If there is not user, go back to LogIn
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LogIn")
+            present(vc, animated: true, completion: nil)
+            
+        } else {
+            
+            // Sub.MARK: - If there is a user, get info from firebase
+            databaseRef.child("users").observe(.value, with: { (snapshot) in
+                DispatchQueue.main.async {
+                    let user = UserRetrive(snapshot: snapshot)
+                    
+                }
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+        }
+        
     }
     
     // MARK: - LOG OUT FUNCION
