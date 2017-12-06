@@ -33,6 +33,10 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        photoProfile.layer.cornerRadius = 250 / 2
+        photoProfile.layer.borderWidth = 2
+        photoProfile.layer.borderColor = UIColor.black.cgColor
+        
         if Auth.auth().currentUser == nil {
             
             // Sub.MARK: - If there is not user, go back to LogIn
